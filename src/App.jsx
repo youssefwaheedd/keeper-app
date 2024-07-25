@@ -17,7 +17,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="flex flex-col">
       <Header />
       <CreateArea onAdd={addNote} />
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4">
