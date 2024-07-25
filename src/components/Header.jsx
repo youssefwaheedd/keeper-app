@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import HighlightIcon from "@material-ui/icons/Highlight";
+import { MdHighlight } from "react-icons/md";
 
 function Header() {
   return (
     <header>
       <h1>
-        <HighlightIcon />
+      <MdHighlight />
         Keeper
       </h1>
     </header>

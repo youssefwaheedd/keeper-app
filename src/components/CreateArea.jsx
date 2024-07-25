@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import AddIcon from "@material-ui/icons/Add";
+import { IoIosAddCircle } from "react-icons/io";
 import { Fab } from "@material-ui/core";
 import { Zoom } from "@material-ui/core";
 function CreateArea(props) {
@@ -53,7 +53,7 @@ function CreateArea(props) {
         />
         <Zoom in={isTrue}>
           <Fab type="submit">
-            <AddIcon />
+          <IoIosAddCircle />
           </Fab>
         </Zoom>
       </form>

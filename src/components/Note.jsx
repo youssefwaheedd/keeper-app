@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React, { useState } from "react";
-import DeleteIcon from "@material-ui/icons/Delete";
+import { MdDelete } from "react-icons/md";
 
 function Note(props) {
   const [isEditing, setIsEditing] = useState(false);
@@ -45,7 +45,7 @@ function Note(props) {
           props.onDelete(props.id);
         }}
       >
-        <DeleteIcon />
+       <MdDelete />
       </button>
     </div>
   );
