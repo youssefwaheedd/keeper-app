@@ -33,7 +33,7 @@ function CreateArea(props) {
   }
 
   return (
-    <div>
+    <div className="flex flex-col justify-center ">
       <form onSubmit={submitNote} className="create-note">
         {isTrue && (
           <input

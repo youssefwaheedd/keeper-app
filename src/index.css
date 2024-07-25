@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset and Base Styles */
 * {
   padding: 0;
   margin: 0;
@@ -10,21 +15,28 @@ body {
   background: #eee;
   background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
   padding: 0 16px;
+  margin: 0;
 }
 
+/* Header Styles */
 header {
   background-color: #f5ba13;
-  margin: auto -16px;
   padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
-
 header h1 {
   color: #fff;
   font-family: "McLaren", cursive;
   font-weight: 200;
 }
 
+/* Footer Styles */
 footer {
   position: absolute;
   text-align: center;
@@ -32,17 +44,13 @@ footer {
   width: 100%;
   height: 2.5rem;
 }
-
 footer p {
   color: #ccc;
 }
+
+/* Note Styles */
 .note {
-  background: #fff;
-  border-radius: 7px;
-  box-shadow: 0 2px 5px #ccc;
   padding: 10px;
-  width: 240px;
-  margin: 16px;
   float: left;
 }
 .note h1 {
@@ -55,7 +63,6 @@ footer p {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
-
 .note button {
   position: relative;
   float: right;
@@ -68,15 +75,19 @@ footer p {
   outline: none;
 }
 
+/* Form Styles */
 form.create-note {
   position: relative;
-  width: 480px;
-  margin: 30px auto 20px auto;
+  width: 80%; /* Adjust width as needed */
+  max-width: 600px; /* Ensure form does not get too wide */
+  margin: 140px auto 20px auto; /* Space below the header and centering */
   background: #fff;
-  padding: 15px;
+  padding: 20px; /* Add padding for better spacing inside the form */
   border-radius: 7px;
   box-shadow: 0 1px 5px rgb(138, 137, 137);
+  z-index: 900;
 }
+
 input,
 textarea {
   width: 100%;

@@ -5,7 +5,7 @@ import { MdHighlight } from "react-icons/md";
 function Header() {
   return (
     <header>
-      <h1>
+      <h1 className="text-3xl flex gap-2">
       <MdHighlight />
         Keeper
       </h1>

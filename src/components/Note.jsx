@@ -28,24 +28,37 @@ function Note(props) {
   };
 
   return (
-    <div className="note" onClick={handleEdit} onBlur={handleSave}>
-      {isEditing ? (
-        <>
-          <input type="text" value={title} onChange={handleTitleChange} />
-          <textarea value={content} onChange={handleContentChange} rows="3" />
-        </>
-      ) : (
-        <>
-          <h1>{title}</h1>
-          <p>{content}</p>
-        </>
-      )}
+    <div className="bg-[#fff] note rounded-lg flex flex-col p-8 shadow-md"  onClick={handleEdit} onBlur={handleSave}>
+      <div className="flex-grow">
+        {isEditing ? (
+          <>
+            <input
+              type="text"
+              value={title}
+              onChange={handleTitleChange}
+              className="w-full p-2 mb-2 border rounded"
+            />
+            <textarea
+              value={content}
+              onChange={handleContentChange}
+              rows="3"
+              className="w-full p-2 border rounded"
+            />
+          </>
+        ) : (
+          <>
+            <h1 className="text-lg font-semibold mb-2">{title}</h1>
+            <p className="text-gray-700">{content}</p>
+          </>
+        )}
+      </div>
       <button
+        className="self-end mt-4 text-red-500 hover:text-red-700"
         onClick={() => {
           props.onDelete(props.id);
         }}
       >
-       <MdDelete />
+        <MdDelete size={24} />
       </button>
     </div>
   );

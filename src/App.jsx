@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -19,6 +20,7 @@ function App() {
     <div>
       <Header />
       <CreateArea onAdd={addNote} />
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4">
       {notes.map((note, index) => (
         <Note
           key={index}
@@ -28,6 +30,7 @@ function App() {
           onDelete={deleteNote}
         />
       ))}
+      </div>
       <Footer />
     </div>
   );
